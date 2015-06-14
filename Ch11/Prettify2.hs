@@ -17,6 +17,9 @@ Empty <> y = y
 x <> Empty = x
 x <> y = x `Concat` y
 
+fold :: (Doc -> Doc -> Doc) -> [Doc] -> Doc
+fold f = foldr f empty
+
 
 
 
